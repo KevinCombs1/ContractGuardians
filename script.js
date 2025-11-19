@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Mobile nav toggle
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('site-nav');
-
-  // Mobile nav toggle
   toggle && toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
@@ -11,26 +10,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Phone CTA
   const phoneBtn = document.getElementById('phone-cta');
-  if(phoneBtn){
-    phoneBtn.addEventListener('click', () => {
-      window.location.href = 'tel:+15551234567'; // replace with real number
-    });
-  }
+  phoneBtn && phoneBtn.addEventListener('click', () => {
+    window.location.href = 'tel:+15551234567';
+  });
 
-  // Form submit feedback
+  // Form submit effect
   const form = document.getElementById('contact-form');
-  if(form){
-    form.addEventListener('submit', function(){
-      const submit = form.querySelector('button[type="submit"]');
-      if(submit){
-        submit.textContent = 'Sending…';
-        submit.disabled = true;
-      }
-    });
-  }
+  form && form.addEventListener('submit', function(){
+    const submit = form.querySelector('button[type="submit"]');
+    submit && (submit.textContent = 'Sending…', submit.disabled = true);
+  });
 
-  // Fade-in sections/cards on scroll
-  const faders = document.querySelectorAll('.section, .card, .profile, .steps li');
+  // Fade-in on scroll
+  const faders = document.querySelectorAll('.section, .card, .profile, .faq details');
   const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
   const appearOnScroll = new IntersectionObserver(function(entries, observer){
     entries.forEach(entry => {
