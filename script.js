@@ -2,25 +2,25 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('site-nav');
 
-  // Toggle mobile navigation
+  // Mobile nav toggle
   toggle && toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
     nav.classList.toggle('open');
   });
 
-  // Phone CTA button
+  // Phone CTA
   const phoneBtn = document.getElementById('phone-cta');
   if(phoneBtn){
     phoneBtn.addEventListener('click', () => {
-      window.location.href = 'tel:+15551234567'; // Replace with real number
+      window.location.href = 'tel:+15551234567'; // replace with real number
     });
   }
 
-  // Contact form submit effect
+  // Form submit feedback
   const form = document.getElementById('contact-form');
   if(form){
-    form.addEventListener('submit', function(e){
+    form.addEventListener('submit', function(){
       const submit = form.querySelector('button[type="submit"]');
       if(submit){
         submit.textContent = 'Sending…';
@@ -29,12 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Fade-in on scroll
+  // Fade-in sections/cards on scroll
   const faders = document.querySelectorAll('.section, .card, .profile, .steps li');
-  const appearOptions = {
-    threshold: 0.2,
-    rootMargin: "0px 0px -50px 0px"
-  };
+  const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
   const appearOnScroll = new IntersectionObserver(function(entries, observer){
     entries.forEach(entry => {
       if(entry.isIntersecting){
