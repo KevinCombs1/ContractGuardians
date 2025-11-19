@@ -3,8 +3,8 @@
 ========================= */
 :root {
   --accent: #0b3d91; /* Navy dark blue */
-  --primary-bg: #f2e6d8; /* Sandstone tan */
-  --secondary-bg: rgba(242, 230, 216, 0.85); /* Semi-transparent sandstone */
+  --primary-bg: #fdfcf7; /* Eggshell white */
+  --secondary-bg: rgba(253, 252, 247, 0.85); /* Semi-transparent eggshell */
   --card-bg: rgba(255, 255, 255, 0.9); /* Slightly opaque white cards */
   --text-main: #1a1a1a; 
   --text-muted: #555555;
@@ -86,7 +86,7 @@ small, .small { color: var(--text-muted); }
 ========================= */
 .form { max-width: 720px; background: var(--card-bg); padding: 28px; border-radius: var(--radius); box-shadow: 0 8px 20px var(--shadow); margin: 0 auto; }
 .form label { display: block; margin-top: 14px; margin-bottom: 6px; font-weight: 600; }
-.form input, .form textarea { width: 100%; padding: 12px; border-radius: var(--radius); border: 1px solid rgba(0,0,0,0.1); margin-bottom: 12px; font-size: 1rem; background: rgba(255,255,255,0.9); }
+.form input, .form textarea { width: 100%; padding: 12px; border-radius: var(--radius); border: 1px solid rgba(0,0,0,0.1); margin-bottom: 12px; font-size: 1rem; background: rgba(255,255,255,0.95); }
 .form-row { display: flex; gap: 16px; margin-top: 16px; align-items: center; flex-wrap: wrap; }
 
 /* =========================
@@ -94,6 +94,12 @@ small, .small { color: var(--text-muted); }
 ========================= */
 .site-footer { background: var(--secondary-bg); backdrop-filter: blur(6px); padding: 28px 0; border-top: 1px solid rgba(0,0,0,0.05); box-shadow: 0 -4px 12px var(--shadow); }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+/* =========================
+   FADE-IN ANIMATIONS
+========================= */
+.fade-init { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+.fade-in { opacity: 1; transform: translateY(0); }
 
 /* =========================
    RESPONSIVE
@@ -108,4 +114,3 @@ small, .small { color: var(--text-muted); }
   .site-nav.open { display: block; }
   .nav-toggle { display: inline-block; }
 }
-
