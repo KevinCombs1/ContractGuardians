@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Contract Guardians — legal help to exit unfair or fraudulent contracts and loans. Partnered attorneys dedicated to negotiation standards and client protection."/>
+  <title>Contract Guardians — Exit Unfair Contracts & Loans</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contract Guardians" />
+  <meta property="og:description" content="Partnered attorneys helping people legally exit unfair or fraudulent contracts and loans." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:image" content="images/og-image.jpg" />
+
+  <!-- favicon (replace if desired) -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Contract Guardians</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="site-nav" class="nav-toggle">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how-it-works">How it Works</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact" class="cta">Get Help</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Exit Unfair Contracts & Loans — Legally.</h1>
+          <p class="lede">Contract Guardians partners with experienced attorneys to enforce negotiation standards, expose fraud, and secure legal exits from abusive financial agreements.</p>
+          <p class="hero-cta">
+            <a class="btn primary" href="#contact">Free Consultation</a>
+            <a class="btn ghost" href="#how-it-works">How it works</a>
+          </p>
+        </div>
+        <div class="hero-media" role="img" aria-label="Handshake representing legal partnership">
+          <!-- optionally swap with an image file -->
+          <svg width="420" height="260" viewBox="0 0 420 260" aria-hidden="true">
+            <rect width="420" height="260" fill="#f3f5f8"></rect>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Contract Review & Analysis</h3>
+            <p>We analyze contracts for predatory terms, hidden fees, and illegal clauses — step-by-step and plain-language explanations.</p>
+          </article>
+          <article class="card">
+            <h3>Negotiation & Settlement</h3>
+            <p>Attorney-led negotiations aimed at rescission, modification, or settlement — minimizing long-term financial harm.</p>
+          </article>
+          <article class="card">
+            <h3>Fraud & Misrepresentation Claims</h3>
+            <p>We identify contract fraud, collect evidence, and pursue legal remedies, including rescission and damages where appropriate.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section how-it-works">
+      <div class="container">
+        <h2>How it Works</h2>
+        <ol class="steps">
+          <li><strong>Free Intake:</strong> Short intake to learn your situation and collect basic documents.</li>
+          <li><strong>Document Review:</strong> Partner attorney reviews the contract and produces a clear assessment.</li>
+          <li><strong>Strategy & Negotiation:</strong> We propose negotiation strategy—settlement, rescission, or litigation if needed.</li>
+          <li><strong>Resolution:</strong> We pursue the agreed path and keep you updated until your matter is resolved.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="team" class="section team">
+      <div class="container">
+        <h2>Meet the Team</h2>
+        <div class="grid grid-3">
+          <div class="profile card">
+            <img src="images/attorney1.jpg" alt="Attorney portrait">
+            <h3>Jordan Avery</h3>
+            <p>Lead Negotiator — 18 years civil litigation & consumer protection experience.</p>
+          </div>
+          <div class="profile card">
+            <img src="images/attorney2.jpg" alt="Attorney portrait">
+            <h3>Riley Brooks</h3>
+            <p>Senior Counsel — transactional law, contracts, and regulatory compliance.</p>
+          </div>
+          <div class="profile card">
+            <img src="images/attorney3.jpg" alt="Attorney portrait">
+            <h3>Case Managers</h3>
+            <p>Dedicated case managers ensure transparent communications and prompt follow-through.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Do you provide representation or just advice?</summary>
+          <p>We connect clients with partner attorneys who can provide full representation where appropriate. Initial intake and guidance are free.</p>
+        </details>
+        <details>
+          <summary>How much will it cost?</summary>
+          <p>Costs vary by matter and approach. We discuss options up front — contingency, flat-fee, or hourly depending on the case.</p>
+        </details>
+        <details>
+          <summary>Is my consultation confidential?</summary>
+          <p>Yes. All attorney-client communications follow applicable confidentiality rules. We provide a clear consent and engagement process.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Request a Free Intake</h2>
+        <p>Submit a short request and our intake team will contact you within 1 business day.</p>
+
+        <!--
+         Replace FORM_ACTION with a Formspree endpoint or your own form handler.
+         Example Formspree: https://formspree.io/f/XXXXXXXX
+         If you don't have a form host, use mailto fallback (instructions in README).
+        -->
+        <form id="contact-form" class="form" method="POST" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID">
+          <label for="name">Full name</label>
+          <input id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel">
+
+          <label for="message">Brief description of the contract/loan</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <div class="form-row">
+            <button class="btn primary" type="submit">Request Intake</button>
+            <button class="btn ghost" type="button" id="phone-cta">Call Us: (555) 123-4567</button>
+          </div>
+
+          <p class="small">By submitting, you agree to our <a href="#privacy">privacy policy</a>. This is not legal advice; engagement creates an attorney-client relationship after signed agreement.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Contract Guardians</strong><br>
+        <span class="small">Partnered attorneys • Consumer protection • Contract rescission</span>
+      </div>
+      <div class="footer-links">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
