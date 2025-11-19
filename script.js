@@ -21,20 +21,28 @@ document.addEventListener('DOMContentLoaded', function() {
     submit && (submit.textContent = 'Sending…', submit.disabled = true);
   });
 
-  // Fade-in on scroll
-  const faders = document.querySelectorAll('.section, .card, .profile, .faq details');
+  // Fade-in on scroll + stagger
+  const faders = document.querySelectorAll('.fade-init');
   const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
   const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry => {
+    entries.forEach((entry, idx) => {
       if(entry.isIntersecting){
-        entry.target.classList.add('fade-in');
+        setTimeout(()=>entry.target.classList.add('fade-in'), idx*150);
         observer.unobserve(entry.target);
       }
     });
   }, appearOptions);
 
   faders.forEach(fader => {
-    fader.classList.add('fade-init');
     appearOnScroll.observe(fader);
+  });
+
+  // Hero parallax
+  const heroImg = document.querySelector('.hero img');
+  window.addEventListener('scroll', function(){
+    if(heroImg){
+      const offset = window.pageYOffset;
+      heroImg.style.transform = `translateY(${offset * 0.3}px)`;
+    }
   });
 });
